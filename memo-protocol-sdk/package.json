@@ -1,7 +1,7 @@
 {
   "name": "memo-protocol-sdk",
-  "version": "0.1.0",
-  "description": "SDK for interacting with Memo Protocol on Sui",
+  "version": "1.0.0",
+  "description": "SDK for interacting with Memo on Sui",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -15,7 +15,11 @@
     "memo",
     "sdk"
   ],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dotasap/memo-protocol/memo-protocol-sdk"
+  },
+  "author": ".ASAP",
   "license": "MIT",
   "dependencies": {
     "@mysten/sui": "^1.29.1"
