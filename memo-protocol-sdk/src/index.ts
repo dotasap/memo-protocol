@@ -16,7 +16,7 @@ const DEFAULT_MODULE_ADDRESS = "0x21eba4a9ac6005260f45e776afebf02de42eada48438de
  * Attaches a memo to a Sui transaction block
  * @param tx The transaction block to attach the memo to
  * @param memo The memo message to attach
- * @param options Configuration options - the module address if
+ * @param options Configuration options - the module address if deployed
  */
 export const attachMemo = (
   tx: Transaction,
