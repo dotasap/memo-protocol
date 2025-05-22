@@ -58,6 +58,9 @@ Parses all memo events from a transaction response.
 #### `decodeMemoMessage(memo: MemoEvent): string`
 Decodes the message bytes from a memo event into a string.
 
+#### Note that memos are emitted as events so the option
+`showEvents: true` is necessary.
+
 ## Project Structure
 
 ```
