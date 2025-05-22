@@ -102,6 +102,10 @@ cd memo-protocol-sdk
 npx ts-node src/test.script.ts
 ```
 
+## Contributing
+
+Contributions are welcome! Feel free to open issues for bugs, feature requests, or improvements. Pull requests are appreciated - make sure to include tests and keep the code style consistent.
+
 ## License
 
 MIT 
