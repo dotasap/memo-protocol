@@ -16,21 +16,20 @@ const DEFAULT_MODULE_ADDRESS = "0x21eba4a9ac6005260f45e776afebf02de42eada48438de
  * Attaches a memo to a Sui transaction block
  * @param tx The transaction block to attach the memo to
  * @param memo The memo message to attach
- * @param options Configuration options - the module address if deployed
+ * @param options Configuration options - the module address if
  */
 export const attachMemo = (
   tx: Transaction,
   memo: string,
   options: MemoOptions = {}
 ): void => {
-  const msgBytes = new TextEncoder().encode(memo);
   
   // Max - 1024 bytes
-  if (msgBytes.length > 1024) {
+  if (memo.length > 1024) {
     throw new Error("Memo message too long. Maximum length is 1024 bytes.");
   }
   
-  if (msgBytes.length === 0) {
+  if (memo.length === 0) {
     throw new Error("Memo message cannot be empty.");
   }
 
@@ -38,7 +37,7 @@ export const attachMemo = (
 
   tx.moveCall({
     target: `${moduleAddress}::memo_protocol::emit_memo`,
-    arguments: [tx.pure(msgBytes)],
+    arguments: [tx.pure.string(memo)],
   });
 };
 
